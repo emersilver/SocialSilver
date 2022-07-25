@@ -1,0 +1,9 @@
+<h1 align="center">
+  SocialSilver
+</h1>
+
+<div align="center">
+  <h3>Projeto responsivo para Desktop e Mobile destinado a ser direto ao ponto, exibir as redes sociais.</h3>
+  <img src="https://user-images.githubusercontent.com/106023084/180673212-095b2009-75c2-449f-bde9-076b460a7535.png">
+</div>
+
