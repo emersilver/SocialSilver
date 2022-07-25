@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html {
+  /* Variaveis */
+  --bg-color-1: #ffffff;
+  --bg-color-2: #51408b;
+  --bg-container: #fafafa;
+  --bg-containerdark: #2c2c2c;
+  --text-color-0: #000;
+  --text-color-1: #fff;
+  --color-primary: #f1c40f;
+  --color-primary-2: #f39c12;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.02s linear;
+  position: relative;
+}
+
+body.dark {
+  background: #272727;
+  color: var(--bg-color-1);
+}
+
+.button {
+  padding-left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  background: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.1);
+}
+
+.label .ball {
+  background: linear-gradient(to right, #fff, #919191);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translate(0px);
+  transition: transform 0.02s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: var(--color-primary);
+}
+.fa-sun {
+  color: var(--color-primary-2);
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.header > img {
+  max-width: 30%;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  padding: 5px;
+  transition: 0.2s;
+}
+
+.header > img:hover {
+  border: 4px solid var(--bg-color-2);
+}
+
+.social {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.social,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.social li {
+  background: var(--bg-color-2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.social li:hover {
+  background: #63588b;
+  transition: 0.3s;
+}
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  color: var(--text-color-1);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+footer {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+@media (max-width: 500px) {
+  .header > img {
+    max-width: 50%;
+  }
+  .container {
+    padding: 10px;
+  }
+  .social {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header > img {
+    max-width: 80%;
+  }
+}
